@@ -1,0 +1,50 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.10.xsd">
+
+    <changeSet id="006-insert-users-and-roles" author="shaturko_maksim">
+        <insert schemaName="main"
+                tableName="users">
+            <column name="login" value="admin"/>
+            <column name="password" value="admin"/>
+            <column name="first_name" value="Админ"/>
+            <column name="middle_name" value="Админович"/>
+            <column name="last_name" value="Админов"/>
+            <column name="email" value="admin@gmail.com"/>
+        </insert>
+        <insert schemaName="main"
+                tableName="users_roles">
+            <column name="user_id" value="1"/>
+            <column name="role_id" value="1"/>
+        </insert>
+        <insert schemaName="main"
+                tableName="users">
+            <column name="login" value="user1"/>
+            <column name="password" value="123456"/>
+            <column name="first_name" value="Иван"/>
+            <column name="middle_name" value="Иванович"/>
+            <column name="last_name" value="Иванов"/>
+            <column name="email" value="ivanivanov@gmail.com"/>
+        </insert>
+        <insert schemaName="main"
+                tableName="users_roles">
+            <column name="user_id" value="2"/>
+            <column name="role_id" value="2"/>
+        </insert>
+        <insert schemaName="main"
+                tableName="users">
+            <column name="login" value="user2"/>
+            <column name="password" value="123456"/>
+            <column name="first_name" value="Андрей"/>
+            <column name="middle_name" value="Андреевич"/>
+            <column name="last_name" value="Андреев"/>
+            <column name="email" value="andreiandreev@gmail.com"/>
+        </insert>
+        <insert schemaName="main"
+                tableName="users_roles">
+            <column name="user_id" value="3"/>
+            <column name="role_id" value="2"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
